@@ -1,6 +1,11 @@
 {
+  "exclude": [
+    "node_modules",
+    "debug",
+    "build"
+  ],
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2019",
     "lib": [
       "dom",
       "dom.iterable",
@@ -18,9 +23,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react"
   },
-  "include": [
-    "src"
-  ]
 }
