@@ -3,7 +3,7 @@ to: _skeleton/<%=h.inflection.dasherize(name)%>/component.tsx
 ---
 import React from 'react'
 
-import * as <%=h.inflection.camelize(name, true)%> from './style.css'
+import style from './style.css'
 
 export type Props = {}
 
@@ -11,7 +11,7 @@ export type Props = {}
 * <%=h.inflection.camelize(name)%> Component
 */
 export const <%=h.inflection.camelize(name)%>: React.FC<Props> = React.memo(function <%=h.inflection.camelize(name)%>(props) {
-  return <div className={<%=h.inflection.camelize(name, true)%>.root}>{String(props)}</div>
+  return <div className={style.root}>{String(props)}</div>
 })
 
   <%=h.inflection.camelize(name)%>.defaultProps = {}

@@ -1,9 +1,18 @@
+import "reboot.css";
 import React from "react";
 import ReactDOM from "react-dom";
-import style from "./style.css";
+
+const App = () => {
+  return <div>Hello</div>;
+};
 
 const target = document.querySelector("#root");
-
-if (target) {
-  ReactDOM.render(<div className={style.root}>Hello World</div>, target);
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js").then(() => {
+    if (target) {
+      ReactDOM.render(<App />, target);
+    }
+  });
+} else {
+  ReactDOM.render(<App />, target);
 }
