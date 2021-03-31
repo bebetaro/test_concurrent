@@ -81,7 +81,7 @@ module.exports = {
     new ProgressBarPlugin(),
     new HtmlWebpackPlugin({
       meta: {
-        title: `Game introduction`,
+        title: `Concurrent mode test`,
       },
       template: path.join(__dirname, "public/index.ejs"),
       favicon: path.join(__dirname, "public/favicon.ico"),
